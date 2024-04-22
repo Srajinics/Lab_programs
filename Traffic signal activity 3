@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class TrafficLight {
+    private String red;
+    private String yellow;
+    private String green;
+    public TrafficLight() {
+        this.red = "OFF";
+        this.yellow = "OFF";
+        this.green = "OFF";
+    }
+    public void setRed(String status) {
+        this.red = status;
+    }
+    public String getRed() {
+        return this.red;
+    }
+    public void setYellow(String status) {
+        this.yellow = status;
+    }
+    public String getYellow() {
+        return this.yellow;
+    }
+    public void setGreen(String status) {
+        this.green = status;
+    }
+    public String getGreen() {
+        return this.green;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TrafficLight trafficLight = new TrafficLight();
+        System.out.println("Enter the status of Red light (ON/OFF):");
+        String redStatus = scanner.nextLine();
+        trafficLight.setRed(redStatus);
+        System.out.println("Enter the status of Yellow light (ON/OFF):");
+        String yellowStatus = scanner.nextLine();
+        trafficLight.setYellow(yellowStatus);
+        System.out.println("Enter the status of Green light (ON/OFF):");
+        String greenStatus = scanner.nextLine();
+        trafficLight.setGreen(greenStatus);
+        System.out.println("Current status of Traffic Lights:");
+        System.out.println("Red Light: " + trafficLight.getRed());
+        System.out.println("Yellow Light: " + trafficLight.getYellow());
+        System.out.println("Green Light: " + trafficLight.getGreen());
+        scanner.close();
+    }
+}
